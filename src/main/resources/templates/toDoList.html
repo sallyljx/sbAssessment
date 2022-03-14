@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+    ul {
+      list-style-type: none;
+      margin: 10;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color: blue;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover {
+      background-color: rgb(118, 241, 241);
+    }
+    
+    h1{
+    color: #000;
+    margin-left: 40px;
+    }
+
+    table {
+    border: 1px solid #000;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    border-collapse: collapse;
+    }
+
+
+    .card{
+    background-color: #0d7e0d98;
+    color: #fff;
+    }
+
+
+
+    </style>
+    <title>toDoList</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li class="nav-item active"><a class = "nav-link" th:href="@{toDoList}">ToDo List</a></li>
+            <li class="nav-item"><a class = "nav-link" th:href="@{toDoListForm}">ToDo List Form</a></li>
+        </ul>
+
+    </div>
+    <div>
+        <h1>TO DO LIST</h1>
+
+        <table>
+            <div>
+                <div id='row' class="row">
+                </div>
+            </div>
+        </table>
+    </div>
+    <script src="js/productController.js"></script>
+    <script src="js/productListing.js"></script>
+</body>
+</html>

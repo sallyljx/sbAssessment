@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        ul {
+        list-style-type: none;
+        margin: 10;
+        padding: 0;
+        overflow: hidden;
+        }
+
+        li {
+          float: left;
+        }
+
+        li a {
+          display: block;
+          color: blue;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+
+        li a:hover {
+          background-color: rgb(118, 241, 241);
+        }
+
+        button {
+        background-color: #4caf50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+        }
+
+        button:hover{
+        background-color: darkgreen;
+        }
+
+
+    </style>
+    <title>toDoListForm</title>
+</head>
+<body>
+    <div>
+            <ul>
+                <li class="nav-item active"><a class = "nav-link" th:href="@{toDoList}">ToDo List</a></li>
+                <li class="nav-item"><a class = "nav-link" th:href="@{toDoListForm}">ToDo List Form</a></li>
+            </ul>
+
+    </div>
+    <form id="newItemForm" >
+    <fieldset>
+        <legend>TO DO LIST FORM</legend>
+        <p>
+            <label for="newTitleInput">Title:</label>
+            <input type="text" id="newTitleInput">
+        </p>
+        <p>
+            <label for="newDescription">Description:</label>
+            <textarea type="text"id="newDescription"></textarea>
+
+        </p>
+        <p>
+            <label for="newDateInput">Target Date:</label>
+            <input type="date" id="newDateInput" name="targetDate"/>
+        </p>
+
+        </p> 
+        <button type="submit" id="addBtn" >Add</button>
+        <p>
+
+    </fieldset>
+
+    </form>
+    
+    <script src="js/productController.js"></script>
+    <script src="js/productForm.js"></script>  
+</body>
+</html>
